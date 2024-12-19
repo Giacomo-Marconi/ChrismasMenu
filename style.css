@@ -1,0 +1,163 @@
+/* Generali */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #faf7f2;
+    background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+    color: #3e3d3d;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #00000000;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: 30px auto;
+    /* background: #fff; */
+    background-color: #00000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #633b2e;
+}
+
+.logo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #9e6154;
+}
+
+.logo span {
+    color: #d04642;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #d04642;
+    margin: 10px 0;
+}
+
+header h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sezioni */
+.menu-section {
+    margin: 20px 0;
+}
+
+.menu-section h4 {
+    font-size: 1.5rem;
+    color: #633b2e;
+    margin-bottom: 10px;
+}
+
+.menu-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.menu-section i {
+    color: #d04642;
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #ccc;
+}
+
+footer .price {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Decorazioni */
+.decor-top,
+.decor-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: #d04642;
+    margin: 10px 0;
+}
+
+.decor-top i,
+.decor-bottom i {
+    margin: 0 10px;
+}
+
+.decor-bottom .fa-ribbon {
+    font-size: 2rem;
+    color: #c29258;
+}
+
+
+
+
+
+
+
+
+.falling-santas {
+    background-color: #fff;
+    background-color: #00000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.santa {
+    position: absolute;
+    top: -10%; /* Inizia appena sopra lo schermo */
+    left: 50%; /* Posizione iniziale per verifica */
+    transform: translateX(-50%); /* Centra l'elemento */
+    font-size: 2rem;
+    animation: fall linear infinite;
+    color: #d04642;
+    z-index: -1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0); /* Inizio animazione sopra lo schermo */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh); /* Termina animazione sotto lo schermo */
+        opacity: 0;
+    }
+}

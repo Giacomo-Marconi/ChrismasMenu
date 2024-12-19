@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menù di Natale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="falling-santas">
+    <div class="menu-container">
+        <div class="decor-top">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-bauble"></i>
+            <i class="fas fa-star"></i>
+        </div>
+
+        <header>
+            
+            <h2>Christmas Menu<br><span></span></h2>
+        </header>
+
+        <section class="menu-section">
+            <h4><i class="fas fa-bread-slice"></i>STARTER</h4>
+            <p>Crostini with liver paté and Vin Santo reduction</p>
+            <p>Russian salad in puff pastry baskets</p>
+            <p>Shrimp cocktail on crisp lettuce</p>
+        </section>
+
+        <section class="menu-section">
+            <h4><i class="fas fa-mug-hot"></i>FIRST COURSES</h4>
+            <p>Tortellini in capon broth</p>
+        </section>
+
+        <section class="menu-section">
+            <h4><i class="fas fa-drumstick-bite"></i>MAIN COURSES</h4>
+            <p></i>Roast veal stuffed with chestnuts and prunes</p>
+            <p>Light yet flavorful, offering a delightful alternative to meat.</p>
+        </section>
+
+        <section class="menu-section">
+            <h4><i class="fas fa-carrot"></i>SIDES</h4>
+            <p>Roasted potatoes with rosemary and lemon</p>
+            <p>Gratinated artichokes with breadcrumbs and Parmesan</p>
+            <p>Glazed winter vegetables with honey</p>
+        </section>
+
+        <section class="menu-section">
+            <h4> <i class="fas fa-cake-candles"></i>DESSERT</h4>
+            <p>Pandoro filled with mascarpone cream and chocolate chips</p>
+            <p>Toasted panettone with vanilla ice cream</p>
+            <p>Pistachio tiramisu</p>
+        </section>
+
+        <footer>
+            <p class="">Thank you for choosing us to celebrate your holiday <br> season--enjoy your meal!</p>
+            <p>You can also select your preferred wine from our list to perfectly complement your menu.</p>
+        </footer>
+
+        <div class="decor-bottom">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-ribbon"></i>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const santaContainer = document.querySelector('.falling-santas');
+            const createSanta = () => {
+                const santa = document.createElement('i');
+                santa.classList.add('fas', 'fa-sleigh', 'santa'); // Usa un'icona di Font Awesome simile a un Babbo Natale
+                santa.style.left = Math.random() * 100 + 'vw';
+                santa.style.animationDuration = Math.random() * 4 + 3 + 's'; // Durata dell'animazione casuale
+                santa.style.fontSize = Math.random() * 1.5 + 1 + 'rem'; // Dimensione casuale
+                santaContainer.appendChild(santa);
+    
+                // Rimuovi l'elemento quando l'animazione è finita
+                santa.addEventListener('animationend', () => {
+                    santa.remove();
+                });
+            };
+    
+            // Genera un Babbo Natale ogni 300ms
+            setInterval(createSanta, 700);
+        });
+    </script>
+    
+</body>
+</html>
