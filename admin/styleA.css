@@ -65,6 +65,9 @@ header h3 {
 /* Sezioni */
 .menu-section {
     margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1vh;
 }
 
 .menu-section h4 {
@@ -102,6 +105,71 @@ header h3 {
     font-size: 2rem;
     color: #c29258;
 }
+
+
+/*Menu Edit*/
+#edit-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+
+#edit{
+    padding: 4vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh
+}
+
+.blur{
+    backdrop-filter: blur(5px);
+
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    border-bottom: 1px solid #d04642;
+    gap: 2vh;
+}
+
+
+
+button{
+    padding: 1vh 2vh;
+    border: none;
+    border-radius: 5px;
+    background-color: #d04642;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
 
 
 

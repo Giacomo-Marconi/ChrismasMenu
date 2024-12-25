@@ -6,10 +6,11 @@
     <title>Christmas Menu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="falling-santas"></div>
-    <div class="menu-container">
+    <div class="menu-container" id="menu">
         <div class="decor-top">
             <i class="fas fa-star"></i>
             <i class="fas fa-bauble"></i>
@@ -17,128 +18,9 @@
         </div>
 
         <header>
-            
-            <h2>Christmas Menu<br><span></span></h2>
+            <h2>Christmas Menu<br></h2>
         </header>
-
-        <section class="menu-section">
-            <h4><!--<i class="fas fa-bread-slice"></i>-->STARTER</h4>
-            <p>Crostini with liver paté and Vin Santo reduction</p>
-            <p>Russian salad in puff pastry baskets</p>
-            <p>Shrimp cocktail on crisp lettuce</p>
-        </section>
-
-        <section class="menu-section">
-            <h4><!--<i class="fas fa-mug-hot"></i>-->FIRST COURSES</h4>
-            <p>Tortellini in capon broth</p>
-        </section>
-
-        <section class="menu-section">
-            <h4><!--<i class="fas fa-drumstick-bite"></i>-->MAIN COURSES</h4>
-            <p></i>Roast veal stuffed with chestnuts and prunes</p>
-            <p>Light yet flavorful, offering a delightful alternative to meat.</p>
-        </section>
-
-        <section class="menu-section">
-            <h4><!--<i class="fas fa-carrot"></i>-->SIDES</h4>
-            <p>Roasted potatoes with rosemary and lemon</p>
-            <p>Gratinated artichokes with breadcrumbs and Parmesan</p>
-            <p>Glazed winter vegetables with honey</p>
-        </section>
-
-        <section class="menu-section">
-            <h4> <!--<i class="fas fa-cake-candles"></i>-->DESSERT</h4>
-            <p>Pandoro filled with mascarpone cream and chocolate chips</p>
-            <p>Toasted panettone with vanilla ice cream</p>
-            <p>Pistachio tiramisu</p>
-        </section>
-
-        <footer>
-            <p class="">Thank you for choosing us to celebrate your holiday <br> season--enjoy your meal!</p>
-            <p>You can also select your preferred wine from our list to perfectly complement your menu.</p>
-        </footer>
-
-        <div class="decor-bottom">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-ribbon"></i>
-            <i class="fas fa-star"></i>
-        </div>
-</div>
-    <script>
-        const icon = [
-            {
-                "icon": "fa-snowflake",
-                "color": "#75d9eb"
-            },
-            {
-                "icon": "fa-sleigh",
-                "color": "red"
-            },
-            {
-                "icon": "fa-tree",
-                "color": "green"
-            },
-            {
-                "icon": "fa-gift",
-                "color": "red"
-            },
-            {
-                "icon": "fa-star",
-                "color": "#f2d82c"
-            },
-        ]
-
-        document.addEventListener('DOMContentLoaded', () => {
-           const santaContainer = document.querySelector('.falling-santas');
-           const createSanta = () => {
-               const santa = document.createElement('i');
-               const inx = Math.floor(Math.random() * icon.length);
-               santa.classList.add('fas', icon[inx]['icon'], 'santa');
-              
-               santa.style.left = Math.random() * 100 + 'vw';
-               santa.style.animationDuration = Math.random() * 4 + 3 + 's'
-               santa.style.fontSize = Math.random() * 1.5 + 1 + 'rem';
-               santa.style.color = icon[inx]['color'];
-               santaContainer.appendChild(santa);
-    
-               santa.addEventListener('animationend', () => {
-                   santa.remove();
-               });
-           };
-    
-           setInterval(createSanta, 100);
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+    </div>
 </body>
 </html>
