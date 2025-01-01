@@ -17,7 +17,7 @@ This project captures the festive spirit with a beautifully designed Christmas m
 ## How to Use
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/Giacomo-Marconi/FestiveFeast.git
+   git clone https://github.com/Giacomo-Marconi/ChrismasMenu
    ```
 2. **Open the HTML File:**
    Simply open the `index.html` file in any browser to view the menu.
